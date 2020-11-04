@@ -27,7 +27,7 @@ import numpy as np
 
 def inertia(mesh):
 
-    print("-----")
+
     # Preliminary check, mesh must be watertight
     if not mesh.is_watertight:
         print("!!! Mesh is not watertight, ignore all results below !!!")
@@ -35,6 +35,8 @@ def inertia(mesh):
     print("density is: ", density, "kg/m^3")
     mesh.density = density
     # print("Volume: ", mesh.volume)
+
+    print("-----")
 
     # Mass
     print("<mass> {m} </mass>".format(m=np.round(mesh.mass, 4)))
@@ -51,7 +53,6 @@ def inertia(mesh):
     print("<inertia_xy> {i} </inertia_xy>".format(i=np.format_float_scientific(I[0,1], precision=4)))
     print("<inertia_xz> {i} </inertia_xz>".format(i=np.format_float_scientific(I[0,2], precision=4)))
     print("<inertia_yz> {i} </inertia_yz>".format(i=np.format_float_scientific(I[1,2], precision=4)))
-    print(I)
     print("-----")
 
 if __name__ == "__main__":
