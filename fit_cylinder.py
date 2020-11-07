@@ -25,12 +25,12 @@ def cylinder(mesh):
     Radius = Min_Cyl["radius"]
     Height = Min_Cyl["height"]
     R = Min_Cyl["transform"]
-    Center = R[0:3,3]
+    Center = np.round(R[0:3,3],5)
 
     # Printing cylinder center
     print("")
     print("Center of the cylinder: [{C1} {C2} {C3}]".format(
-    C1=Center[0], C2=Cente[1], C3=Center[2]))
+    C1=Center[0], C2=Center[1], C3=Center[2]))
 
     # Printing output for blender python API
     print("-------")
