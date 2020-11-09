@@ -1,7 +1,7 @@
 # OpenSim Model Building
-This Repository aims to provide tools to automate steps to construct a skeletal model in OpenSim.
-All scripts are made to work with the 'trimesh' python library: https://trimsh.org/
-Most of the scripts give an output compatible with the Blender Python console, which is recommended to work with for the building of the model
+This Repository aims to provide tools to automate steps to construct a skeletal model in OpenSim.  
+All scripts are made to work with the 'trimesh' python library: https://trimsh.org/  
+Most of the scripts give an output compatible with the Blender Python console, which is recommended to work with for the building of the model  
 
 ### The scripts below are ordered in the suggested flow of work:
 
@@ -10,7 +10,7 @@ Most of the scripts give an output compatible with the Blender Python console, w
 - Needed step as most of the other scripts recquire watertight meshes
 - use: `python is_watertight.py`
 
-**fit_sphere.py**
+**fit_sphere.py**  
 **fit_cylinder.py**
 - Both scripts fit a cylinder or a sphere around a given mesh
 - Output provides center of the cylinder/sphere as well as blender command to create, place and orient the fitted shape in the right place
