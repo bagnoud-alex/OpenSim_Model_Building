@@ -5,31 +5,31 @@ Most of the scripts give an output compatible with the Blender Python console, w
 
 ### The scripts below are ordered in the suggested flow of work:
 
-==is_watertight.py==
+**is_watertight.py**
 - Checks if all mesh files are watertight in a given folder
 - Needed step as most of the other scripts recquire watertight meshes
-- use: 'python is_watertight.py'
+- use: `python is_watertight.py`
 
-==fit_sphere.py==
-==fit_cylinder.py==
+**fit_sphere.py**
+**fit_cylinder.py**
 - Both scripts fit a cylinder or a sphere around a given mesh
 - Output provides center of the cylinder/sphere as well as blender command to create, place and orient the fitted shape in the right place
-- use: 'python fit_sphere mesh_name.stl' or 'python fit_cylinder mesh_name.stl'
+- use: python fit_sphere mesh_name.stl' or 'python fit_cylinder mesh_name.stl'
 
-==transform_inertia.py==
+**transform_inertia.py**
 - Rotates a mesh file along its principle axes of inertia
 - Output provides the transformation matrix to directly paste in Blender python console
 - use: 'python transform_inertia.py mesh_name.stl'
 
 
-==Rotate_Reference_Frame.ipynb==
+**Rotate_Reference_Frame.ipynb**
 - Notebook which can help to give specific axes to a body
 
-==get_properties.py==
+**get_properties.py**
 - Outputs properties for Opensim such as mass, center of mass, inertia tensor
 - use: 'python get_properties.py mesh_name.stl'
 
-==icp.py==
+**icp.py**
 - Script to align a source mesh to a taget mesh. Useful to place a processed body (where the origin or axes have been shifted) to a unprocessed body (for example from a CT scan)
 - Outputs <location_in_parent> as well as <orientation_in_parent>, both needed for OpenSim model building
 - use: 'python icp.py source_mesh.stl target_mesh.stl'
