@@ -1,3 +1,26 @@
+# Author: Alex Bagnoud
+
+# ---------------------------------------------------------------------------
+# This script aligns two meshes using an ICP (Iterative closest point) method
+# From the trimesh library. It also provides information for OpenSim
+
+# It is used to align a processed body to a parent body in a default position.
+
+# It first transforms the two meshes into their principle axes of inertia
+# and only then performs icp for a more consistent result.
+# The three transformations are then concatenated into one at the end.
+
+# The output is specialized for the blender console api
+
+# HOW TO USE:
+# - call: python icp.py source_mesh.icp target_mesh.icp
+# - The output gives: - Root mean square error after transformation
+#                     - <Location_in_parent> and <Orientation_in_parent>
+#                     - Blender transform to copy and paste in blender python
+#                       console while having the processed body selected
+# ---------------------------------------------------------------------------
+
+
 import sys
 import trimesh
 import numpy as np
