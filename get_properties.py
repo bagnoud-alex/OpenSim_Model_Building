@@ -8,7 +8,8 @@
 
 # HOW TO USE:
 # - place the script in the same folder as the .stl file
-# - in a command terminal, run: python get_properties.py name_body.stl
+# - in a command terminal, run: python get_properties.py name_body.stl denstiy
+# - density is an optionnal argument and default value is 1132 kg/m^3
 # - Output is printed in the terminal
 
 # Note: density is computed with no units. The volume will be the same as the
@@ -16,17 +17,11 @@
 # be in kg.
 # ---------------------------------------------------------------------------
 
-# ---------------------------------------------------------------------------
-# Define the density here
-density = 1132 # [kg/m^3]
-# ---------------------------------------------------------------------------
-
 import sys
 import trimesh
 import numpy as np
 
-def inertia(mesh):
-
+def print_properties(mesh, density):
 
     # Preliminary check, mesh must be watertight
     if not mesh.is_watertight:
@@ -55,6 +50,18 @@ def inertia(mesh):
     print("<inertia_yz> {i} </inertia_yz>".format(i=np.format_float_scientific(I[1,2], precision=4)))
     print("-----")
 
+
 if __name__ == "__main__":
+    # Parse the arguments
+    arg = sys.argv
+
+    # Loading mesh
     mesh = trimesh.load(sys.argv[1])
-    inertia(mesh)
+
+    # Checking if an argument for density is given
+    if len(arg) == 3:
+        density = sys.argv[2]
+    else:
+        density = 1132
+
+    print_properties(mesh, density)
