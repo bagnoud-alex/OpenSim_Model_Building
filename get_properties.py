@@ -62,6 +62,6 @@ if __name__ == "__main__":
     if len(arg) == 3:
         density = sys.argv[2]
     else:
-        density = 1132
+        density = 1060 # [kg/m^3] Mean flesh density
 
     print_properties(mesh, density)
