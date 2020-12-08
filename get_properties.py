@@ -9,7 +9,8 @@
 # HOW TO USE:
 # - place the script in the same folder as the .stl file
 # - in a command terminal, run: python get_properties.py name_body.stl density
-# - density is an optionnal argument and default value is 1060 kg/m^3
+# - density is an optionnal argument and default value is:
+# - 1060 kg/m^3 = Density all tissues of a reference body (Brozek, 1966)
 # - Output is printed in the terminal
 
 # Note: density is computed with no units. The volume will be the same as the
