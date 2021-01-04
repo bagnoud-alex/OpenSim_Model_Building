@@ -27,8 +27,9 @@ Most of the scripts give an output compatible with the Blender Python console, w
 
 **get_properties.py**
 - Outputs properties for Opensim such as mass, center of mass, inertia tensor
-- use: `python get_properties.py mesh_name.stl density=1132`
-- density is an optionnal input, default value is 1132kg/m^3
+- use: `python get_properties.py mesh_name.stl density=1060`
+- density is an optionnal input, default value is 1060kg/m^3
+- use 1132kg/m^3 for bones, 1060kg/m^3 for a mean density of all tissues
 
 **icp.py**
 - Script to align a source mesh to a taget mesh. Useful to place a processed body (where the origin or axes have been shifted) to a unprocessed body (for example from a CT scan)
