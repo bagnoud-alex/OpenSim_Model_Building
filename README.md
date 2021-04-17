@@ -7,14 +7,14 @@ Most of the scripts give an output compatible with the Blender Python console, w
 
 **is_watertight.py**
 - Checks if all mesh files are watertight in a given folder
-- Needed step as most of the other scripts recquire watertight meshes
+- Needed step as most of the other scripts require watertight meshes
 - use: `python is_watertight.py`
 
 **fit_sphere.py**  
 **fit_cylinder.py**
 - Both scripts fit a cylinder or a sphere around a given mesh
 - Output provides center of the cylinder/sphere as well as blender command to create, place and orient the fitted shape in the right place
-- use: `python fit_sphere mesh_name.stl` or `python fit_cylinder mesh_name.stl`
+- use: `python fit_sphere.py mesh_name.stl` or `python fit_cylinder.py mesh_name.stl`
 
 **transform_inertia.py**
 - Rotates a mesh file along its principle axes of inertia
